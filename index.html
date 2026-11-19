@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30자 일기 개인정보처리방침</title>
+<style>
+  :root { --bg:#ffffff; --ink:#1d1b20; --muted:#6b6670; --line:#e6e2ea; --accent:#e85a20; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141317; --ink:#f0edf2; --muted:#a19ca6; --line:#2e2c33; --accent:#ff7a3d; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.75 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 20px 80px; }
+  h1 { font-size:26px; margin:0 0 4px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:20px; border-top:1px solid var(--line); }
+  p, li { margin:6px 0; }
+  .meta { color:var(--muted); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; margin:10px 0; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>30자 일기 개인정보처리방침</h1>
+<p class="meta">시행일: 2026년 11월 19일</p>
+
+<p>“30자 일기”(이하 “앱”)는 하루 30자 일기와 사진으로 인증샷 카드를 만드는 앱입니다. 앱은 회원가입이 없고, 일기는 사용자의 휴대폰에 저장됩니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+
+<h2>1. 휴대폰 안에만 저장되는 정보</h2>
+<p>다음 정보는 사용자의 휴대폰에만 저장되며 개발자나 서버로 보내지 않습니다.</p>
+<ul>
+  <li>일기 글, 날짜, 카드 꾸미기 설정</li>
+  <li>일기에 넣은 사진과 완성된 카드 이미지</li>
+</ul>
+<p>사진은 사용자가 시스템 사진 선택기로 직접 고른 사진만 읽습니다. 앱은 갤러리 전체에 접근하지 않습니다. 이 정보는 앱의 [기록]에서 일기를 삭제하거나 앱을 삭제하면 지워집니다.</p>
+
+<h2>2. 서버로 보내는 정보</h2>
+<table>
+  <tr><th>정보</th><th>언제, 왜</th><th>보관</th></tr>
+  <tr>
+    <td>AI 스타일로 바꿀 사진</td>
+    <td>사용자가 [스타일 변환]을 누를 때만, 고른 사진 한 장을 서버로 보내 AI 스타일 이미지로 바꿉니다.</td>
+    <td>변환에만 쓰고 저장하지 않습니다.</td>
+  </tr>
+  <tr>
+    <td>익명 사용자 ID</td>
+    <td>앱을 처음 쓸 때 Firebase 익명 로그인으로 만들어지는 무작위 ID입니다. 이름·이메일·전화번호와 연결되지 않으며, 하루 AI 변환 횟수를 세는 데 씁니다.</td>
+    <td>앱을 삭제하면 휴대폰에서 지워집니다.</td>
+  </tr>
+  <tr>
+    <td>날짜별 AI 변환 횟수, 광고 보상 확인 기록</td>
+    <td>하루 무료 횟수와 광고로 받은 추가 횟수를 지키기 위해 저장합니다.</td>
+    <td>30일이 지나면 자동으로 삭제합니다.</td>
+  </tr>
+  <tr>
+    <td>신고한 AI 결과</td>
+    <td>사용자가 AI 결과를 [신고]할 때만, 그 결과 이미지를 작게 줄인 것과 신고 사유를 보내 문제를 검토하고 AI 품질을 개선하는 데 씁니다.</td>
+    <td>90일이 지나면 자동으로 삭제합니다.</td>
+  </tr>
+  <tr>
+    <td>앱 무결성 확인 정보</td>
+    <td>정상 앱에서 온 요청인지 확인하기 위해 Firebase App Check(Google Play Integrity)를 씁니다.</td>
+    <td>확인에만 씁니다.</td>
+  </tr>
+</table>
+<p>일기 글은 서버로 보내지 않습니다. 모든 통신은 암호화(HTTPS)됩니다.</p>
+
+<h2>3. 광고</h2>
+<p>앱은 사용자가 원할 때 보는 보상형 광고를 위해 Google AdMob을 사용합니다. AdMob은 광고 제공, 광고 성과 측정, 부정 사용 방지를 위해 광고 ID, 기기 정보, 대략적인 위치(IP 주소 기반), 앱 사용 정보 등을 수집할 수 있습니다.
+광고 보상이 정상적으로 지급되었는지 확인하기 위해 AdMob이 광고 시청 완료를 앱 서버에 알려 주며, 이때 위의 익명 사용자 ID가 함께 전달됩니다.</p>
+<p>자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트의 데이터 사용 방식</a>을 참고하세요. 휴대폰 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수 있습니다.</p>
+
+<h2>4. 정보를 처리하는 곳(위탁)</h2>
+<table>
+  <tr><th>받는 곳</th><th>하는 일</th></tr>
+  <tr><td>Google (Firebase, Google Cloud, Vertex AI)</td><td>익명 로그인, 앱 무결성 확인, 변환 횟수 저장, AI 이미지 변환</td></tr>
+  <tr><td>Google (AdMob)</td><td>보상형 광고 제공과 광고 시청 확인</td></tr>
+</table>
+<p>개발자는 위 목적 외에 개인정보를 다른 사람에게 팔거나 제공하지 않습니다.</p>
+
+<h2>5. 아동</h2>
+<p>앱은 만 13세 이상을 대상으로 하며, 13세 미만 아동의 정보를 알면서 수집하지 않습니다.</p>
+
+<h2>6. 사용자의 선택과 삭제</h2>
+<ul>
+  <li>AI 변환을 쓰지 않으면 사진은 휴대폰 밖으로 나가지 않습니다. 원본 사진만으로도 일기를 쓰고 저장할 수 있습니다.</li>
+  <li>일기와 사진은 [기록]에서 삭제하거나 앱을 삭제하면 지워집니다.</li>
+  <li>서버의 변환 횟수 기록은 30일, 신고 기록은 90일 뒤 자동으로 지워지며, 그 전에 지우기를 원하면 아래 연락처로 요청할 수 있습니다.</li>
+</ul>
+
+<h2>7. 바뀌는 경우</h2>
+<p>이 방침이 바뀌면 이 페이지에 새 시행일과 함께 알립니다.</p>
+
+<h2>8. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:kwanghyeon@kakao.com">kwanghyeon@kakao.com</a></p>
+</main>
+</body>
+</html>
